@@ -1,0 +1,18 @@
+--- feeds/packages/net/aircrack-ng/Makefile	2015-08-08 08:15:23.934174951 +0200
++++ feeds/packages/net/aircrack-ng/Makefile	2015-08-08 08:16:02.006363745 +0200
+@@ -38,10 +38,13 @@
+ 
+ MAKE_FLAGS += prefix=/usr \
+ 	libnl=true \
+-	sqlite=false \
+-	unstable=false \
++	sqlite=true \
++	pcre=true \
++	experimental=true \
+ 	OSNAME=Linux
+ 
++CFLAGS="$(TARGET_CFLAGS) -Wall -Iinclude/ $(TARGET_CPPFLAGS) -D_REVISION=0" \
++
+ define Package/aircrack-ng/install
+ 	$(INSTALL_DIR) $(1)/usr/bin
+ 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/* $(1)/usr/bin/
