@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=reaver-wps-fork-t6x
-PKG_REV:=dc164932bc3c472e04cd9ab2591e3e95ad72cf81
+PKG_REV:=db6cc396682b44e3533220278b69aa36c9906d47
 PKG_VERSION:=1.6.2
 PKG_RELEASE:=1
 
