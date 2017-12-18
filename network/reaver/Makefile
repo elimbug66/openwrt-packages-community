@@ -46,7 +46,7 @@ CONFIGURE_PATH:=src
 
 MAKE_PATH:=src
 
-TARGET_CFLAGS+=$(TARGET_CPPFLAGS)
+TARGET_CFLAGS+=$(TARGET_CPPFLAGS) -static
 
 define Package/reaver/install
 	$(INSTALL_DIR) $(1)/usr/bin
